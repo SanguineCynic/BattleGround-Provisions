@@ -1,10 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Buttons/CharacterSelectText.png" type="Texture" id=1]
 [ext_resource path="res://navyblue.jpg" type="Texture" id=2]
-[ext_resource path="res://menuMusic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Chars and Shots/gingerMan.png" type="Texture" id=3]
+[ext_resource path="res://Buttons/fightbtn_animated.png" type="Texture" id=4]
+[ext_resource path="res://CharacterSelect.gd" type="Script" id=5]
+[ext_resource path="res://Chars and Shots/carrotGuy.png" type="Texture" id=6]
+[ext_resource path="res://Chars and Shots/sweetPotat.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 140, 86 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 86, 140, 86 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
 
 [node name="CharacterSelect" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="CharacterSelectText" type="Sprite" parent="."]
 position = Vector2( 512, 136 )
@@ -18,4 +39,29 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.6732, 1.373 )
 texture = ExtResource( 2 )
 
-[node name="menuMusic" parent="." instance=ExtResource( 3 )]
+[node name="FightButton" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 416.0
+margin_top = 456.0
+margin_right = 608.0
+margin_bottom = 568.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="FightButton"]
+position = Vector2( 97, 54.5 )
+scale = Vector2( 1.35714, 1.33721 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="GingerMan" type="Sprite" parent="."]
+position = Vector2( 509, 360 )
+texture = ExtResource( 3 )
+
+[node name="SweetPotat" type="Sprite" parent="."]
+position = Vector2( 749, 358 )
+texture = ExtResource( 7 )
+
+[node name="CarrotGuy" type="Sprite" parent="."]
+position = Vector2( 299, 344 )
+scale = Vector2( 0.581492, 0.581492 )
+texture = ExtResource( 6 )

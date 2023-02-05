@@ -3,8 +3,8 @@ extends KinematicBody2D
 var movespeed = 50
 var clove_speed = 100
 var shoot_distance = 10
-var clove = preload("res://GarlicClove.tscn")
-onready var sprite = get_node("AnimatedSprite")
+var clove = preload("res://CarrotSlice.tscn")
+onready var sprite = get_node("CarrotSprite")
 
 func _ready():
 	pass
@@ -50,8 +50,7 @@ func fire():
 func kill():
 	get_tree().reload_current_scene()
 
-
-
-func _on_Area2D_body_entered(body):
+func _on_Area2D2_body_entered(body):
 	if "Enemy" in body.name:
+		print("GOODBYE WORLD")
 		kill()

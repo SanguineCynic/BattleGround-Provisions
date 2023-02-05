@@ -5,6 +5,7 @@ func _ready():
 	$Timer.connect("timeout", self, "queue_free")
 	$Timer.set_wait_time(2)
 	$Timer.start()
+	
 
 func _on_GarlicClove_body_entered(body):
 	if body is TileMap:

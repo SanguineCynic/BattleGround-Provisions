@@ -13,7 +13,7 @@ func _physics_process(_delta):
 	motion = move_and_slide(motion * movespeed)
 
 func _on_Area2D_body_entered(body):
-	if "GarlicClove" in body.name:
+	if "CarrotSlice" in body.name:
 		$Timer.connect("timeout", self, "queue_free")
 		$Timer.set_wait_time(0.05)
 		$Timer.start()
