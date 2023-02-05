@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Devil May Cry 5 - Devil Trigger (Chorus Edit version).mp3-30f27bb0b734ff9a56d60aa7ef2796e5.mp3str"
+
+[deps]
+
+source_file="res://Devil May Cry 5 - Devil Trigger (Chorus Edit version).mp3"
+dest_files=[ "res://.import/Devil May Cry 5 - Devil Trigger (Chorus Edit version).mp3-30f27bb0b734ff9a56d60aa7ef2796e5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
